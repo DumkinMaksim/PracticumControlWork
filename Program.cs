@@ -38,3 +38,10 @@ ShowArray(elemets);
 Console.WriteLine();
 Console.WriteLine("Элементы которые меньше  либо равны трем символам исходного массива ");
 ShowArray(FindElementsLessCharacters(elemets));
+
+string [] elemets2={"Welcome","Germany","China","Hello","Amerika"};
+Console.WriteLine("Массив состоит из элементов");
+ShowArray(elemets2);
+Console.WriteLine();
+Console.WriteLine("Элементы которые меньше  либо равны трем символам исходного массива ");
+ShowArray(FindElementsLessCharacters(elemets2));
