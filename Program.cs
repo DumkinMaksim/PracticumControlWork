@@ -5,28 +5,36 @@
 //коллекциями. Лучше обойтись исключительно массивами.
 
 // Примеры   :
-//["Hello","2",":)",] ->["2",":)"]
+//["Hello","2",":)"] ->["2",":)"]
 //["1234","1567","-2","computer sience"]->["-2"]
 //["Russia","Denmark","Kazan"]->[]
 
 string[] FindElementsLessCharacters(string []word)
 {
+     string [] find=new string [word.Length];
     for (int i=0;i<word.Length;i++)
     {
-        int k=0;
-        if (word[i].Length>3)
-            k++;
-            word[i]="0";
+       
+        if (word[i].Length<=3)
+           
+            find[i]=word[i];
     }
 
-    return word;
+    return find;
 }
 
-void Show2dArray(string []words)
+void ShowArray(string []words)
 {
      for(int i=0;i<words.Length;i++)
         {
             Console.Write(" "+words[i]+" ");
-            Console.WriteLine();
+            
         }
+        Console.WriteLine();
 }
+string [] elemets={"Welcome","Bay","I",";)","-2","In","Hello","Russia"};
+Console.WriteLine("Массив состоит из элементов");
+ShowArray(elemets);
+Console.WriteLine();
+Console.WriteLine("Элементы которые меньше  либо равны трем символам исходного массива ");
+ShowArray(FindElementsLessCharacters(elemets));
