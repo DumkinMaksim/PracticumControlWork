@@ -9,26 +9,22 @@
 //["1234","1567","-2","computer sience"]->["-2"]
 //["Russia","Denmark","Kazan"]->[]
 
-string FindElementsLessCharacters(string []word)
+string[] FindElementsLessCharacters(string []word)
 {
-    string []findword=new string [word.Length];
     for (int i=0;i<word.Length;i++)
     {
-        for (int j=0;j<word.Length;j++)
-        {
-            if (word[i].Length<=3)
-               findword[j]=word[i];
-        }
-        
-
+        int k=0;
+        if (word[i].Length>3)
+            k++;
+            word[i]="0";
     }
 
-    return findword;
+    return word;
 }
 
 void Show2dArray(string []words)
 {
-     for(int i=0;i<words.GetLength(0);i++)
+     for(int i=0;i<words.Length;i++)
         {
             Console.Write(" "+words[i]+" ");
             Console.WriteLine();
